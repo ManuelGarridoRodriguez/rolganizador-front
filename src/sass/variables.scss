@@ -1,7 +1,10 @@
-@import '_colors.scss';
-
-$breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default;
-
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
+@import "_colors.scss";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+$header-font: "Noto Serif", serif;
+$main-font: "Roboto", sans-serif;
