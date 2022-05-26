@@ -28,7 +28,7 @@ const Navigator = (props) => {
                 </Container>
             </Navbar>
             {title && (
-                <div style={{ backgroundImage: `url(${titlePhoto})` }}>
+                <div className="titleContainer" style={{ backgroundImage: `url(${titlePhoto})` }}>
                     <h1>{title}</h1>
                     {action && (
                         <div>

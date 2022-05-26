@@ -1,10 +1,27 @@
 .navDiv {
   border-top: medium solid #ff0000;
+  .container {
+    margin-left: 0.5rem;
+  }
+
   nav {
     border-top: thin solid #000000;
     border-right: thin solid #000000;
     border-left: thin solid #000000;
     background-color: #4c4c50;
+    padding: 1rem 0;
+
+    .navbar-nav {
+      gap: 1rem;
+    }
+
+    a {
+      color: white !important;
+    }
+  }
+
+  .titleContainer {
+    padding: 2rem 0 2rem 2rem;
   }
 }
 
