@@ -1,0 +1,65 @@
+@import "../../sass/variables.scss";
+
+.card {
+  background-color: #2c2b39;
+  color: white;
+  border-radius: 1.5rem;
+  hr {
+    width: 80%;
+    margin: 0 auto;
+    height: 0.1rem;
+  }
+}
+
+.card-header {
+  background-color: #2c2b39 !important;
+  margin: 2rem;
+  font-family: $main-font;
+  font-size: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+.card-body {
+  border-radius: 1.5rem;
+  background-color: #2c2b39;
+  padding: 3rem !important;
+  font-family: $main-font;
+  font-size: 20px;
+  line-height: 23px;
+  form {
+    display: flex;
+    flex-direction: column;
+    button {
+      font-size: 1.5rem;
+      font-family: $main-font;
+      line-height: 23px;
+      text-align: center;
+      margin: 1rem auto;
+      width: 50%;
+    }
+    .buttonRegister {
+      font-size: 1.5rem;
+      font-family: $main-font;
+      line-height: 23px;
+      text-align: center;
+      margin-top: 1rem;
+      color: black;
+      background-color: #ff5c00;
+    }
+    p {
+      margin: 0;
+      text-align: center;
+    }
+    a {
+      width: 50%;
+      align-self: center;
+      color: #d25555;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+    }
+  }
+}

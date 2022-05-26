@@ -1,20 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import Intro from "./pages/Intro";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/header/Header";
+import Login from "./pages/login";
+import Register from "./pages/register";
 import "./index.scss";
-import Favourites from "./pages/Favourites";
-import store from "./services/redux/store";
-import About from "./pages/About";
-import Navigate from "./components/NavBar";
+import LandingPage from "./pages/landing";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Navigate />
+    <Header />
     <Routes>
-      <Route path="/" element={<Intro />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/landing" element={<LandingPage />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
 );
+
+
+// FIXME: Register pilla los estilos de login y, si no le pones !important a los estilos de .card, se va al carajo la card

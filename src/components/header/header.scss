@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #2c2b39;
+  height: 7rem;
+  h1 {
+    margin: 0;
+    color: #ffffff;
+  }
+  .headerRol {
+    color: #dd0d0d;
+  }
+}
