@@ -1,5 +1,5 @@
 import React from "react";
-import './styles.scss';
+import './header.scss';
 import logoDice from '../../images/diceLogo.png';
 
 const Header = () => {

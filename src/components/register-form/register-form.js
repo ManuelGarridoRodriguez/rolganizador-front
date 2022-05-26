@@ -1,6 +1,8 @@
 import React from "react";
-import { Card, Form, Button } from "react-bootstrap";
-import "./styles.scss";
+import { Card, Form, Button, Nav } from "react-bootstrap";
+import "./register-form.scss";
+
+// TODO: Buscar mejores placeholders
 
 const RegisterForm = () => {
     return (
@@ -13,7 +15,7 @@ const RegisterForm = () => {
                 <Form>
                     <Form.Group className="mb-3" controlId="email">
                         <Form.Label>Nombre de la cuenta</Form.Label>
-                        <Form.Control type="text" placeholder="Elige tu nombre para la web" />
+                        <Form.Control type="text" placeholder="Elige tu apodo" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="password">
                         <Form.Label>Dirección de correo electrónico</Form.Label>
@@ -27,9 +29,9 @@ const RegisterForm = () => {
                         Registrarte
                     </Button>
                     {" "}
-                    <Button variant="dark" type="submit">
+                    <Nav.Link href="/login">
                         Atrás
-                    </Button>
+                    </Nav.Link>
                 </Form>
             </Card.Body>
         </Card>

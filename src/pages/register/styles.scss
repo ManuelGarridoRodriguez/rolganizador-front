@@ -1,10 +1,8 @@
-body {
+.registerBody {
+  height: 100%;
   background-size: cover;
   background-image: url("../../images/indexBackground.png");
   background-repeat: no-repeat;
-}
-
-.registerBody {
   display: flex;
   flex-direction: column;
   padding: 5rem;

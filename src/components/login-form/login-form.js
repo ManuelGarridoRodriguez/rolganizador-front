@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Form, Button } from "react-bootstrap";
-import './styles.scss';
+import { Card, Form, Button, Nav } from "react-bootstrap";
+import './login-form.scss';
 
 const LoginForm = () => {
     return (
@@ -23,10 +23,9 @@ const LoginForm = () => {
                         Entrar
                     </Button>
                     <p>o</p>
-                    <Button className="buttonRegister" type="button">
+                    <Nav.Link className="buttonRegister" href="/register">
                         Registrarte
-                    </Button>
-                    <a href="#">He olvidado mi contraseña</a>
+                    </Nav.Link>
                 </Form>
             </Card.Body>
         </Card>
