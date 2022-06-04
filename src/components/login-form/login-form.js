@@ -4,7 +4,7 @@ import './login-form.scss';
 
 const LoginForm = () => {
     return (
-        <Card className="mx-auto">
+        <Card className="mx-auto loginCard">
             <Card.Header>
                 Iniciar sesión en el RolGanizador
             </Card.Header>

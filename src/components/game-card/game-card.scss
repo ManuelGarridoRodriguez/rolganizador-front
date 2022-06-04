@@ -1,5 +1,40 @@
+@import "../../sass/variables.scss";
+
 .cardContainer {
+  width: 26.9rem;
+  height: 25rem;
+
+  .imageCardContainer {
+    width: 26.9rem;
+    height: 12rem;
+  }
   img {
-    width: 22px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    position: relative;
+    font-family: $main-font;
+    padding: 1rem 1.5rem;
+
+    a {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 0.5rem;
+      border: 0.1rem solid red;
+      border-radius: 5px;
+      text-decoration: none;
+      color: red;
+      padding: 0.5rem;
+      font-weight: bold;
+
+      &:hover {
+        color: #2C2B39;
+        border-color: #2C2B39;
+        cursor: pointer;
+      }
+    }
   }
 }
