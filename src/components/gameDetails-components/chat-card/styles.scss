@@ -1,0 +1,25 @@
+.chatCard {
+  margin: 2rem 2rem 0 0;
+  max-width: 40rem;
+  
+  .card-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  .author {
+    color: #FF5C00;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  .message {
+    font-size: 1.2em;
+    margin-bottom: 0.1rem;
+  }
+
+  .time {
+    font-size: 0.8em;
+  }
+}

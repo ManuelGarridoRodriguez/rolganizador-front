@@ -1,0 +1,32 @@
+@import "../../../sass/variables.scss";
+
+.creatorCard {
+  margin: 2rem 0 0 0;
+  font-family: $main-font;
+  background-color: #2C2B39 !important;
+  color: white;
+
+  .card-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .contentCard {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 1rem;
+
+    .creatorName {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
+  
+
+  img {
+    border-radius: 50%;
+    width: 10rem;
+  }
+}

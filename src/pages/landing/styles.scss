@@ -1,0 +1,36 @@
+@import "../../sass/variables.scss";
+
+.landingPage {
+  background-color: #eaeaea;
+  .cardGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+    padding: 1rem 2rem;
+
+    .addGameCard {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .addGame {
+      width: auto;
+      height: 60%;
+    }
+
+    .addGameLink {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: black;
+      font-family: $main-font;
+      :hover {
+        color: black;
+      }
+    }
+  }
+}

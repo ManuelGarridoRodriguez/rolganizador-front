@@ -1,15 +1,67 @@
+@import "../../sass/variables.scss";
+
 .navDiv {
   border-top: medium solid #ff0000;
+  .container {
+    margin-left: 0.5rem;
+  }
+
   nav {
     border-top: thin solid #000000;
     border-right: thin solid #000000;
     border-left: thin solid #000000;
     background-color: #4c4c50;
+    padding: 1rem 0;
+    font-family: $main-font;
+    
+    .navbar-nav {
+      gap: 1rem;
+    }
+
+    a {
+      color: white !important;
+    }
+  }
+
+  .titleContainer {
+    padding: 0 0 0 2rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2C2B39;
+    color: white;
+    font-family: $main-font;
+
+    .imageContainer {
+      width: 70%;
+      height: 100%;
+      position: relative;
+      display:inline-block;
+      background-position: 'center';
+      background-size: 'cover';
+      
+      button {
+        position: absolute;
+        bottom:10%;
+        right:5%;
+        padding: 1rem 3rem;
+      }
+    }
   }
 }
 
 .actionButton {
+  color: white;
+  font-weight: bold !important;
+  font-size: 1.5em !important;
+  border-color: transparent !important;
+  &:hover {
+    background-color: #2C2B39 !important;
+  }
+
   &.exit {
+    background-color: #F93D3D;
   }
   &.create {
   }

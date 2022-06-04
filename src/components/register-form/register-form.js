@@ -6,7 +6,7 @@ import "./register-form.scss";
 
 const RegisterForm = () => {
     return (
-        <Card className="mx-auto">
+        <Card className="mx-auto registerCard">
             <Card.Header>
                 Regístrate en el RolGanizador
             </Card.Header>
