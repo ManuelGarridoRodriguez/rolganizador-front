@@ -1,0 +1,11 @@
+.petitions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  .card {
+    width: auto;
+    height: auto;
+    margin: 1rem;
+  }
+}
