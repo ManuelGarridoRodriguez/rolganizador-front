@@ -7,12 +7,12 @@ const PlayersCard = (props) => {
   return (
     <Card className="playersCard">
       <Card.Body>
-        <Card.Title>{`${players.length} JUGADORAS`}</Card.Title>
+        <Card.Title>{`${players.length} Participantes`}</Card.Title>
         <div className="playersContainer">
           {!!players.length && players.map((player) => (
             <div className="player">
               <img src={player.img} alt={player.name} />
-              <p>{player.name.length > 9 ? `${player.name.substring(0,9)}...` : player.name}</p>
+              <p>{player.name.length > 9 ? `${player.name.substring(0, 9)}...` : player.name}</p>
             </div>
           ))}
         </div>

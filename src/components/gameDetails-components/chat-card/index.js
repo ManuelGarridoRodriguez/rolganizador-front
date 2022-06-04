@@ -7,8 +7,8 @@ const ChatCard = (props) => {
 
   return (
     <Card className="chatCard">
+      <Card.Header>CHARLAS</Card.Header>
       <Card.Body>
-        <Card.Title>CHARLAS</Card.Title>
         <div className="commentsSection">
           {!!comments.length && comments.map((comment) => (
             <div>
@@ -17,10 +17,10 @@ const ChatCard = (props) => {
               <p className="time">{`Publicado el: ${comment.time}`}</p>
               <hr />
             </div>
-          ) )}
+          ))}
         </div>
-        <div>
-          <Form.Control type="text" />
+        <Form.Control type="text" />
+        <div className="divSendButton">
           <Button>Enviar</Button>
         </div>
       </Card.Body>

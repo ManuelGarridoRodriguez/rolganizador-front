@@ -16,12 +16,12 @@ const GameDetails = () => {
       img: "https://randomuser.me/api/portraits/lego/3.jpg",
       date: "23/03/2022"
     },
-    tags: ["DnD5e", "Terror", "Culetes", "Pansus"],
+    tags: ["DnD5e", "Terror"],
     participants: [
       {
         name: "UNA SEÑORA SIN PELUCA",
         img: "https://randomuser.me/api/portraits/lego/6.jpg",
-      }, 
+      },
       {
         name: "UN PERRO CON SOMBRERO",
         img: "https://randomuser.me/api/portraits/lego/1.jpg",
@@ -40,12 +40,12 @@ const GameDetails = () => {
         message: 'Comentario sarcástico 1fgdggggggggggggggggggggggggggggggggggsdfsfsdfssdfffffffffffffffffffffffffffffsdfffffffffff',
         author: "UNA SEÑORA SIN PELUCA",
         time: "23/04/2022 - 12:00"
-      }, 
+      },
       {
         message: "Comentario informativo 2",
         author: "UN PERRO CON SOMBRERO",
         time: "23/04/2022 - 12:10"
-      }, 
+      },
       {
         message: "Comentario sin atención 3",
         author: "UN PERRO CON SOMBRERO",
@@ -58,18 +58,18 @@ const GameDetails = () => {
   // TODO: si aquí entra un jugador, abandonar partida, si entra el creador eliminar partida
   return (
     <div className="gameDetailsPage">
-      <Navigator 
-        title="Partidas en curso"
+      <Navigator
+        title="Partida de ejemplo"
         titlePhoto={gameMock.image}
-        action={{ 
-          actionColor: 'exit',
-          actionClick: () => {},
+        action={{
+          actionColor: '#F93D3D',
+          actionClick: () => { },
           actionTitle: 'Abandonar',
         }}
       />
       <div className="cardContainer">
         <DetailsCard description={gameMock.description} tags={gameMock.tags} />
-        <div>
+        <div className="centralCardContainer">
           <CreatorCard creator={gameMock.creator} />
           <PlayersCard players={gameMock.participants} />
         </div>

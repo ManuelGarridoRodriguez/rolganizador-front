@@ -2,12 +2,25 @@
 
 .landingPage {
   background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
   .cardGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1rem;
-    grid-row-gap: 2rem;
-    padding: 1rem 2rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+
+    .card {
+      height: 26rem;
+      transition: box-shadow 0.5s;
+      &:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+      }
+    }
 
     .addGameCard {
       justify-content: center;
@@ -16,7 +29,7 @@
 
     .addGame {
       width: auto;
-      height: 60%;
+      height: 30%;
     }
 
     .addGameLink {
@@ -28,9 +41,6 @@
       text-decoration: none;
       color: black;
       font-family: $main-font;
-      :hover {
-        color: black;
-      }
     }
   }
 }

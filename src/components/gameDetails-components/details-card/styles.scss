@@ -1,15 +1,11 @@
 @import "../../../sass/variables.scss";
 
 .descriptionCard {
-
-  margin: 2rem 0 0 2rem;
-  width: 30rem;
   font-family: $main-font;
 
   .card-title {
     font-size: 2em;
     font-weight: bold;
-    margin-bottom: 1rem;
   }
 
   .tagContainer {
@@ -22,10 +18,7 @@
   }
 
   hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
-
