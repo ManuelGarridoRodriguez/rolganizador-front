@@ -6,15 +6,14 @@ const CreatorCard = (props) => {
   const { creator } = props;
   return (
     <Card className="creatorCard">
+      <Card.Header>CREADA POR</Card.Header>
       <Card.Body>
-        <Card.Title>CREADA POR</Card.Title>
-        <div className="contentCard">
-          <img src={creator.img} alt={`Imagen de ${creator.name}`} />
-          <div className="cardText">
-            <Card.Text className="creatorName">{creator.name}</Card.Text>
-            <Card.Text>Miembro desde:</Card.Text>
-            <Card.Text>{creator.date}</Card.Text>
-          </div>
+        <img src={creator.img} alt={`Imagen de ${creator.name}`} />
+
+        <div className="creatorInformation">
+          <Card.Title>{creator.name}</Card.Title>
+          <Card.Text>Se unió el:</Card.Text>
+          <Card.Text>{creator.date}</Card.Text>
         </div>
       </Card.Body>
     </Card>

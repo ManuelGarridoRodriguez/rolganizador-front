@@ -6,8 +6,8 @@ const DetailsCard = (props) => {
   const { description, tags } = props;
   return (
     <Card className="descriptionCard">
+      <Card.Header>DETALLES</Card.Header>
       <Card.Body>
-        <Card.Title>DETALLES</Card.Title>
         <Card.Text>{description}</Card.Text>
         <hr />
         <div className="tagContainer">

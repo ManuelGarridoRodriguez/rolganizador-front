@@ -39,7 +39,7 @@ const Navigator = (props) => {
             }}
           >
             {action && (
-              <Button className={`actionButton ${action.actionColor}`} onClick={action.actionClick}>{action.actionTitle}</Button>
+              <Button className="actionButton" style={{ backgroundColor: action.actionColor }} onClick={action.actionClick}>{action.actionTitle}</Button>
             )}
           </div>
         </div>

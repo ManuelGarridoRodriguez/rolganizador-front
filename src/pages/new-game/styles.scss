@@ -1,0 +1,35 @@
+.actionButton {
+  padding: 0.3rem 5rem !important;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.mainForm {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  margin: 1rem 0;
+  .card {
+    margin: 1rem;
+    width: 100%;
+    height: 25rem;
+  }
+  .card-body {
+    width: 100%;
+    height: 100%;
+  }
+  .form-label {
+    font-size: 1.5em;
+  }
+  .formGroup {
+    height: 100%;
+  }
+}
+#gameDetails {
+  resize: none;
+  height: 85%;
+}
