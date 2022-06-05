@@ -1,13 +1,19 @@
+import React from "react";
 import { usersExample } from "../../mockup/partida"
 import { Link } from "react-router-dom";
 import { Card, Form, Button } from "react-bootstrap";
 import Navigator from "../../components/nav/nav";
 import titleImage from "../../images/title-games.png";
+import DeleteAccountModal from "../../components/delete-account-modal";
 import "./styles.scss"
 
 const EditUserPage = () => {
+    const [modalShow, setModalShow] = React.useState(false);
+
     return (
         <div className="editUserPage">
+            <DeleteAccountModal show={modalShow} onHide={() => setModalShow(false)} />
+
             <Navigator title={usersExample.name} titlePhoto={titleImage} />
             <div className="mainUserDiv">
                 <Form>
@@ -47,7 +53,7 @@ const EditUserPage = () => {
                         <Card.Body>
                             <Card.Text>¡EH! Cuidado, una vez canceles la cuenta no podrás recuperarla de ninguna forma. Todas esas partidas de rol que podrías jugar se preguntarán dónde estás.</Card.Text>
                             <Card.Footer>
-                                <Button variant="danger">Cancelar la cuenta</Button>
+                                <Button variant="danger" onClick={() => setModalShow(true)}>Cancelar la cuenta</Button>
                             </Card.Footer>
                         </Card.Body>
                     </Card>

@@ -21,7 +21,7 @@ ReactDOM.render(
       <Route path="/" element={<LandingPage />} />
       <Route path="/game/:id" element={<GameDetails />} />
       <Route path="/new-game" element={<NewGame />} />
-      <Route path="/user/" element={<UserPage />} /> {/*TODO: Hay que poner el /:id */}
+      <Route path="/user-page/" element={<UserPage />} /> {/*TODO: Hay que poner el /:id */}
       <Route path="/edit-user/" element={<EditUserPage />} /> {/*TODO: Hay que poner el /:id */}
       <Route path="/petitions/" element={<Petitions />} /> {/*TODO: Hay que poner el /:id */}
     </Routes>

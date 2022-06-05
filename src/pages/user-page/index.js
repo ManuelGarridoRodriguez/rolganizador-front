@@ -7,6 +7,7 @@ import titleImage from "../../images/title-games.png"
 import "./styles.scss";
 
 const UserPage = () => {
+
     return (
         <div className="userPage">
             <Navigator title={usersExample.name} titlePhoto={titleImage} />
@@ -23,7 +24,7 @@ const UserPage = () => {
                     <hr />
                 </Card.Body>
                 <Card.Footer>
-                    <Link className="linkToProfile" to="/"><BsBrush /> Editar el perfil</Link>
+                    <Link className="linkToProfile" to="/edit-user"><BsBrush /> Editar el perfil</Link>
                 </Card.Footer>
             </Card>
         </div>

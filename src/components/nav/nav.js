@@ -13,13 +13,13 @@ const Navigator = (props) => {
             <Nav className="me-auto">
               <Nav.Link href="/">Inicio</Nav.Link>
               <NavDropdown title="Partidas" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/create-game">Crear partida</NavDropdown.Item>
+                <NavDropdown.Item href="/new-game">Crear partida</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/game-list">Listado de partidas</NavDropdown.Item>
+                <NavDropdown.Item href="/">Listado de partidas</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/petitions">Peticiones</Nav.Link>
               <NavDropdown title="Usuario" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/perfil">Mi perfil</NavDropdown.Item>
+                <NavDropdown.Item href="/user-page">Mi perfil</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>Cerrar sesión</NavDropdown.Item>
               </NavDropdown>
