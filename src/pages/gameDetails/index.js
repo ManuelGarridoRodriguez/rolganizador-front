@@ -5,6 +5,7 @@ import Navigator from "../../components/nav/nav";
 import './styles.scss';
 import PlayersCard from "../../components/gameDetails-components/players-card";
 import ChatCard from "../../components/gameDetails-components/chat-card";
+import ExitGameModal from "../../components/exit-game-modal";
 
 const GameDetails = () => {
   const gameMock = {
@@ -55,15 +56,18 @@ const GameDetails = () => {
     image: "https://images.unsplash.com/photo-1653509517330-a5dbac11243f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170",
   }
 
+  const [modalShow, setModalShow] = React.useState(false);
+
   // TODO: si aquí entra un jugador, abandonar partida, si entra el creador eliminar partida
   return (
     <div className="gameDetailsPage">
+      <ExitGameModal show={modalShow} onHide={() => setModalShow(false)} />
       <Navigator
         title="Partida de ejemplo"
         titlePhoto={gameMock.image}
         action={{
           actionColor: '#F93D3D',
-          actionClick: () => { },
+          actionClick: () => setModalShow(true),
           actionTitle: 'Abandonar',
         }}
       />

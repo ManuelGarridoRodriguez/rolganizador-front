@@ -1,4 +1,4 @@
-const gameArray = [
+export const gameArray = [
     {
         id: "1",
         name: "Partida 1 con nombre muy largo para ver qué pasa",
@@ -51,4 +51,8 @@ const gameArray = [
     }
 ]
 
-export default gameArray;
+export const usersExample =
+{
+    name: "UNA SEÑORA SIN PELUCA",
+    img: "https://randomuser.me/api/portraits/lego/6.jpg",
+};

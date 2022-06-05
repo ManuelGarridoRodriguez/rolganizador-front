@@ -1,0 +1,60 @@
+.userPage {
+  background-color: #eaeaea;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  hr {
+    width: 90%;
+    border: rem solid black;
+  }
+  .card {
+    margin: 1rem 30%;
+    padding: 1rem;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1;
+    img {
+      width: 30%;
+      height: auto;
+      border-radius: 50%;
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      .userGames {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        p {
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+    .linkToProfile {
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem;
+      border: 0.15rem solid #ff5c00;
+      border-radius: 0.3rem;
+      text-decoration: none;
+      color: #ff5c00;
+      font-weight: bold;
+
+      &:hover {
+        color: #2c2b39;
+        border-color: #2c2b39;
+        cursor: pointer;
+      }
+    }
+  }
+}

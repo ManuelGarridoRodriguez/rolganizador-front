@@ -1,5 +1,5 @@
 import React from "react";
-import gameArray from "../../mockup/partida";
+import { gameArray } from "../../mockup/partida";
 import GameCard from "../../components/game-card/Game-card";
 import Navigator from "../../components/nav/nav";
 import titleImage from "../../images/title-games.png"
