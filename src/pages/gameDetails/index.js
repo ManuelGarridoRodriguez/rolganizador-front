@@ -59,6 +59,7 @@ const GameDetails = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
   // TODO: si aquí entra un jugador, abandonar partida, si entra el creador eliminar partida
+
   return (
     <div className="gameDetailsPage">
       <ExitGameModal show={modalShow} onHide={() => setModalShow(false)} />
