@@ -1,4 +1,5 @@
-import { usersExample } from "../../mockup/partida"
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { BsBrush } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
@@ -7,20 +8,29 @@ import titleImage from "../../images/title-games.png"
 import "./styles.scss";
 
 const UserPage = () => {
+    const [user, setUser] = useState();
+    useEffect(() => {
+        const currentUser = localStorage.getItem('user');
+        axios
+            .get(`http://localhost:3001/users/${currentUser}`)
+            .then(({ data }) => setUser(data))
+    }, []);
+
+    const editUserDate = (date) => {
+        date = date.split("T")[0];
+        const reverseDate = date.split('-').reverse().join('/');
+        return reverseDate;
+    }
 
     return (
         <div className="userPage">
-            <Navigator title={usersExample.name} titlePhoto={titleImage} />
+            {user && <Navigator title={user.name} titlePhoto={titleImage} />}
             <Card>
-                <Card.Img variant="top" src={usersExample.img} />
+                {user && <Card.Img variant="top" src={user.image} />}
                 <Card.Body>
-                    <Card.Title>{usersExample.name}</Card.Title>
-                    <div className="userGames">
-                        <Card.Text>(X) partidas creadas</Card.Text>
-                        <Card.Text>(X) partidas unidas</Card.Text>
-                    </div>
+                    {user && <Card.Title>{user.nick}</Card.Title>}
                     <hr />
-                    <Card.Text>Cuenta creada el: XX/XX/XXXX </Card.Text>
+                    {user && <Card.Text>Cuenta creada el: {editUserDate(user.createdDate)} </Card.Text>}
                     <hr />
                 </Card.Body>
                 <Card.Footer>

@@ -11,7 +11,7 @@ const DetailsCard = (props) => {
         <Card.Text>{description}</Card.Text>
         <hr />
         <div className="tagContainer">
-          {!!tags.length && tags.map((t) => <Badge pill bg="danger">{t}</Badge>)}
+          {!!tags.length && tags.map((t) => <Badge pill bg="danger">{t.name}</Badge>)}
         </div>
       </Card.Body>
     </Card>

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from './components/header/header';
+import Header from './components/header/Header';
 import EditUserPage from "./pages/edit-user";
 import Login from "./pages/login";
 import Register from "./pages/register";
@@ -23,9 +23,9 @@ ReactDOM.render(
       <Route exact path="/" element={<PrivateRoute><LandingPage /></PrivateRoute>} />
       <Route exact path="/game/:id" element={<PrivateRoute><GameDetails /></PrivateRoute>} />
       <Route exact path="/new-game" element={<PrivateRoute><NewGame /></PrivateRoute>} />
-      <Route exact path="/user-page/:id" element={<PrivateRoute><UserPage /></PrivateRoute>} />
-      <Route exact path="/edit-user/:id" element={<PrivateRoute><EditUserPage /></PrivateRoute>} />
-      <Route exact path="/petitions/:id" element={<PrivateRoute><Petitions /></PrivateRoute>} />
+      <Route exact path="/user-page" element={<PrivateRoute><UserPage /></PrivateRoute>} />
+      <Route exact path="/edit-user" element={<PrivateRoute><EditUserPage /></PrivateRoute>} />
+      <Route exact path="/petitions" element={<PrivateRoute><Petitions /></PrivateRoute>} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")

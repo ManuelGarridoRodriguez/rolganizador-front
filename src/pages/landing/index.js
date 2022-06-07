@@ -12,16 +12,17 @@ import "./styles.scss";
 
 const LandingPage = () => {
   const [games, setGames] = useState([]);
-
+  // TODO: en back faltaría agregar la ordenación y buscar partidas por nombre de user, etc. Si no da tiempo, cambiar el buscador para que sea solo de nombre de partida.
+  // Lo mismo para las peticiones
   useEffect(() => {
     axios
-    .get('http://localhost:3001/game')
-    .then((response) => {
-      const { data } = response;
-      setGames(data);
-    });
+      .get('http://localhost:3001/game')
+      .then((response) => {
+        const { data } = response;
+        setGames(data);
+      });
   }, [])
-  
+
   return (
     <div className="landingPage">
       <Navigator title="Partidas en curso" titlePhoto={titleImage} />

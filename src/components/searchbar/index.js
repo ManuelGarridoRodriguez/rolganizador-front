@@ -20,16 +20,7 @@ const Searchbar = ({ endpoint, setElements }) => {
 
   return (
     <div className="searchbar">
-      <Form.Control type="text" placeholder="Buscar partida" value={search} onChange={handleOnChange} />
-      <Form.Select>
-        <option value='all'>Todas</option>
-        <option value='mine'>Creadas por mi</option>
-        <option value='notMine'>No creadas por mi</option>
-      </Form.Select>
-      <Form.Select>
-        <option value='timeOrder'>Recientes primero</option>
-        <option value='textOrder'>Ordenar por nombre</option>
-      </Form.Select>
+      <Form.Control type="text" placeholder="Nombre de partida" value={search} onChange={handleOnChange} />
       <Button type="button" onClick={handleSearch}>Buscar</Button>
     </div>
   )

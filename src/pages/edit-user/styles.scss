@@ -4,6 +4,12 @@
   display: flex;
   flex-direction: column;
 
+  .updateButtons {
+    border: 0.2rem solid #ff5c00;
+    color: #ff5c00;
+    background-color: transparent;
+  }
+
   .mainUserDiv {
     margin: 1rem;
     display: flex;
@@ -50,7 +56,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     gap: 1rem;
-
     .imageCard {
       width: 100%;
       height: 100%;
@@ -60,11 +65,7 @@
         justify-content: space-evenly;
         align-items: center;
       }
-      button {
-        border: 0.2rem solid #ff5c00;
-        color: #ff5c00;
-        background-color: transparent;
-      }
+
       img {
         border-radius: 50%;
         height: auto;

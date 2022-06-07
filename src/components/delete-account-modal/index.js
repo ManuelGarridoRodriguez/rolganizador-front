@@ -1,7 +1,20 @@
 import { Modal, Button } from "react-bootstrap";
+import axios from "axios";
 import "./styles.scss"
+import { useNavigate } from "react-router-dom";
 
 function DeleteAccountModal(props) {
+    const navigate = useNavigate();
+
+    const handleDeleteAccount = () => {
+        const { userId, onHide } = props;
+        axios.delete(`http://localhost:3001/users/${userId}`);
+        onHide();
+        localStorage.removeItem('user');
+        localStorage.removeItem('userInfo');
+        navigate('/login');
+    }
+
     return (
         <Modal
             {...props}
@@ -30,7 +43,7 @@ function DeleteAccountModal(props) {
                 </p>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="danger" onClick={props.onHide}>ELIMINAR</Button>
+                <Button variant="danger" onClick={handleDeleteAccount}>ELIMINAR</Button>
                 <Button onClick={props.onHide}>Mantener</Button>
             </Modal.Footer>
         </Modal>

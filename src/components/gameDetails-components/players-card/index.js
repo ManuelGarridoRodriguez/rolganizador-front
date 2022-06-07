@@ -11,7 +11,7 @@ const PlayersCard = (props) => {
         <div className="playersContainer">
           {!!players.length && players.map((player) => (
             <div className="player">
-              <img src={player.img} alt={player.name} />
+              <img src={player.image} alt={player.name} />
               <p>{player.name.length > 9 ? `${player.name.substring(0, 9)}...` : player.name}</p>
             </div>
           ))}
