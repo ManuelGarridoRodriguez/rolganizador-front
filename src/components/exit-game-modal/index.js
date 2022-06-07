@@ -2,6 +2,7 @@ import { Modal, Button } from "react-bootstrap";
 import "./styles.scss"
 
 function ExitGameModal(props) {
+    const { modalInfo } = props;
     return (
         <Modal
             {...props}
@@ -11,17 +12,16 @@ function ExitGameModal(props) {
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    ¿Deseas abandonar la partida?
+                    {modalInfo.title}
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <p>
-                    Si dejas la partida deberás pedir permiso para entrar de nuevo y dejarás de tener acceso
-                    al chat y la información de la misma. ¿Deseas abandonarla?
+                    {modalInfo.text}
                 </p>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="danger" onClick={props.onHide}>¡Sí!</Button>
+                <Button variant="danger" onClick={modalInfo.action}>¡Sí!</Button>
                 <Button onClick={props.onHide}>No</Button>
             </Modal.Footer>
         </Modal>

@@ -16,7 +16,7 @@ const GameCard = (props) => {
           <Card.Text>{game.description.length > 150 ? `${game.description.substring(0, 150)}...` : game.description}</Card.Text>
         </div>
         <div>
-          <Link className="linkToGame" to={`/game/${game.id}`}>Ver detalles</Link>
+          <Link className="linkToGame" to={`/game/${game._id}`}>Ver detalles</Link>
         </div>
       </Card.Body>
     </Card>

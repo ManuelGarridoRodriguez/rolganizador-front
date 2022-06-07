@@ -1,9 +1,17 @@
 import React from "react";
 import './styles.scss';
+import { useNavigate } from 'react-router-dom';
 import { Navbar, Container, NavDropdown, Button, Nav } from "react-bootstrap";
 
 const Navigator = (props) => {
   const { title, action, titlePhoto } = props;
+  const navigate = useNavigate();
+
+  const closeSession = () => {
+    localStorage.removeItem('user');
+    navigate('/login');
+  }
+
   return (
     <div className="navDiv">
       <Navbar collapseOnSelect>
@@ -21,7 +29,7 @@ const Navigator = (props) => {
               <NavDropdown title="Usuario" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/user-page">Mi perfil</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item>Cerrar sesión</NavDropdown.Item>
+                <NavDropdown.Item><Button className="closeSession" onClick={() => closeSession()}>Cerrar sesión</Button></NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
