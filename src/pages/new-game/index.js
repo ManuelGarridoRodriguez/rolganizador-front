@@ -12,15 +12,15 @@ const NewGame = () => {
     const navigate = useNavigate();
     const [game, setGame] = useState({
         name: '',
-        description:'',
+        description: '',
         tags: []
     });
     const [tags, setTags] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/tags').then(({data}) => {
+        axios.get('http://localhost:3001/tags').then(({ data }) => {
             const optionsTags = data.map((tag) => {
-                return {value: tag._id, label: tag.name}
+                return { value: tag._id, label: tag.name }
             });
             setTags(optionsTags)
         });
@@ -39,19 +39,19 @@ const NewGame = () => {
             description: game.description,
             creator: localStorage.getItem('user'),
             name: game.name,
-            image: getRandomImage('game'),       
+            image: getRandomImage('game'),
         };
 
-        axios.post('http://localhost:3001/game', backGame).then(() => {navigate('/');});
-        
+        axios.post('http://localhost:3001/game', backGame).then(() => { navigate('/'); });
+
     }
 
     const onSelectedOptionsChange = (tags) => {
-        const clonedGame = {...game};
+        const clonedGame = { ...game };
         clonedGame.tags = tags.map((tag) => tag.value);
         setGame(clonedGame);
     }
-    
+
     return (
         <div className="newGamePage">
             <Navigator title="Crear partida" titlePhoto={titleImage} action={{ actionColor: "#FF5C00", actionTitle: "Crear", actionClick: createGame }} />
