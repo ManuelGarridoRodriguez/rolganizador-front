@@ -41,6 +41,8 @@ const NewGame = () => {
             name: game.name,
             image: getRandomImage('game'),
         };
+        console.log(backGame);
+
 
         axios.post('http://localhost:3001/game', backGame).then(() => { navigate('/'); });
 
@@ -49,6 +51,8 @@ const NewGame = () => {
     const onSelectedOptionsChange = (tags) => {
         const clonedGame = { ...game };
         clonedGame.tags = tags.map((tag) => tag.value);
+        console.log(clonedGame);
+
         setGame(clonedGame);
     }
 
@@ -60,11 +64,11 @@ const NewGame = () => {
                     <Card>
                         <Card.Header>INFORMACIÓN</Card.Header>
                         <Card.Body>
-                            <Form.Group controlId="gameTitle">
+                            <Form.Group controlId="name">
                                 <Form.Label>
                                     Título *
                                 </Form.Label>
-                                <Form.Control id='name' type="text" placeholder="Nombre de la partida" onChange={handleOnChange} value={game.name} />
+                                <Form.Control type="text" placeholder="Nombre de la partida" onChange={handleOnChange} value={game.name} />
                             </Form.Group>
                             <Form.Group controlId="gameTags">
                                 <Form.Label>
@@ -79,11 +83,11 @@ const NewGame = () => {
                     <Card>
                         <Card.Header>DETALLES</Card.Header>
                         <Card.Body>
-                            <Form.Group className="formGroup" controlId="gameDetails">
+                            <Form.Group className="formGroup" controlId="description">
                                 <Form.Label>
                                     Descripción *
                                 </Form.Label>
-                                <Form.Control id='description' type="text" as="textarea" placeholder="Explica de qué va tu partida" onChange={handleOnChange} value={game.description} />
+                                <Form.Control type="text" as="textarea" placeholder="Explica de qué va tu partida" onChange={handleOnChange} value={game.description} />
                             </Form.Group>
                         </Card.Body>
                     </Card>
