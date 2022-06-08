@@ -2,10 +2,18 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import "./styles.scss";
 
-const SVG = ({component: Component, className}) => <Component className={className} />
+const SVG = ({ component: Component, className }) => <Component className={className} />
 
 const CreatorCard = (props) => {
+
   const { creator } = props;
+
+  const editUserDate = () => {
+    const date = creator.createdDate.split("T")[0];
+    const reverseDate = date.split('-').reverse().join('/');
+    return reverseDate;
+  }
+
   return (
     <Card className="creatorCard">
       <Card.Header>CREADA POR</Card.Header>
@@ -14,8 +22,8 @@ const CreatorCard = (props) => {
 
         <div className="creatorInformation">
           <Card.Title>{creator.name}</Card.Title>
-          <Card.Text>Se unió el:</Card.Text>
-          <Card.Text>{creator.date}</Card.Text>
+          <Card.Text>Se unió el: </Card.Text>
+          <Card.Text>{editUserDate()}</Card.Text>
         </div>
       </Card.Body>
     </Card>
