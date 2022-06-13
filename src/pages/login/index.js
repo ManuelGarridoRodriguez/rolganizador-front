@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import LoginForm from "../../components/login-form/Login-form";
+import LoginForm from "../../components/login-form/login-form";
 import { useNavigate } from 'react-router-dom';
 import "./styles.scss";
 
