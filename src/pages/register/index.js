@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { getRandomImage } from "../utils";
-import RegisterForm from "../../components/register-form/Register-form";
+import RegisterForm from "../../components/register-form/register-form";
 import "./styles.scss";
 
 const Register = () => {
