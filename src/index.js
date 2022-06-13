@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from './components/header/Header';
+import Header from './components/header/header';
 import EditUserPage from "./pages/edit-user";
 import Login from "./pages/login";
 import Register from "./pages/register";
