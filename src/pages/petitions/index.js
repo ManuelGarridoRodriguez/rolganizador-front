@@ -9,39 +9,39 @@ const Petitions = () => {
     const [petitions, setPetitions] = useState([]);
 
     const acceptUser = (petition) => {
-        const clonedPetition = {...petition};
+        const clonedPetition = { ...petition };
         const clonedPetitionsArray = [...petitions];
         clonedPetition.status = 'accepted';
         axios
-        .patch(`http://localhost:3001/petitions/${petition._id}`, clonedPetition)
-        .then(({data}) => {
-            const index = petitions.findIndex((petition) => petition._id === data._id);
-            clonedPetitionsArray[index] = data;
-            setPetitions(clonedPetitionsArray);
+            .patch(`http://localhost:3001/petitions/${petition._id}`, clonedPetition)
+            .then(({ data }) => {
+                const index = petitions.findIndex((petition) => petition._id === data._id);
+                clonedPetitionsArray[index] = data;
+                setPetitions(clonedPetitionsArray);
 
-            const game = {...data.game};
-            game.participants.push(data.sender._id);
-            axios.patch(`http://localhost:3001/game/${petition.game._id}`, game);
-        })
+                const game = { ...data.game };
+                game.participants.push(data.sender._id);
+                axios.patch(`http://localhost:3001/game/${petition.game._id}`, game);
+            })
     }
 
     const rejectUser = (petition) => {
-        const clonedPetition = {...petition};
+        const clonedPetition = { ...petition };
         const clonedPetitionsArray = [...petitions];
         clonedPetition.status = 'rejected';
         axios
-        .patch(`http://localhost:3001/petitions/${petition._id}`, clonedPetition)
-        .then(({data}) => {
-            const index = petitions.findIndex((petition) => petition._id === data._id);
-            clonedPetitionsArray[index] = data;
-            setPetitions(clonedPetitionsArray);
-        })
+            .patch(`http://localhost:3001/petitions/${petition._id}`, clonedPetition)
+            .then(({ data }) => {
+                const index = petitions.findIndex((petition) => petition._id === data._id);
+                clonedPetitionsArray[index] = data;
+                setPetitions(clonedPetitionsArray);
+            })
     }
 
 
     const renderActions = (petition) => {
         const actualUser = localStorage.getItem('user');
-        if ((petition.receptor?._id === actualUser && petition.status === 'pending') || petition.status !== 'user deleted') {
+        if ((petition.receptor?._id === actualUser && petition.status === 'pending') && petition.status !== 'user deleted') {
             return (
                 <div>
                     <Button variant="danger" type="button" onClick={() => rejectUser(petition)} >Rechazar</Button>{' '}
